@@ -1,0 +1,574 @@
+2024-12-11 09:34:14 [main] INFO  c.e.a.ApiClientApplicationTests - Starting ApiClientApplicationTests using Java 21.0.5 with PID 13436 (started by pc in C:\Users\pc\Desktop\Prueba NTT\apiClient)
+2024-12-11 09:34:14 [main] INFO  c.e.a.ApiClientApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-11 09:34:16 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2024-12-11 09:34:16 [main] INFO  c.e.a.ApiClientApplicationTests - Started ApiClientApplicationTests in 2.701 seconds (process running for 3.656)
+2024-12-11 09:34:17 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.apiClient.ClientControllerTest]: ClientControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-11 09:34:17 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.apiClient.ApiClientApplication for test class com.example.apiClient.ClientControllerTest
+2024-12-11 09:34:17 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-12-11 09:34:17 [main] INFO  c.e.apiClient.ClientControllerTest - Starting ClientControllerTest using Java 21.0.5 with PID 13436 (started by pc in C:\Users\pc\Desktop\Prueba NTT\apiClient)
+2024-12-11 09:34:17 [main] INFO  c.e.apiClient.ClientControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-12-11 09:34:17 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-12-11 09:34:17 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-12-11 09:34:17 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-12-11 09:34:18 [main] INFO  c.e.apiClient.ClientControllerTest - Started ClientControllerTest in 0.518 seconds (process running for 4.99)
+2024-12-11 09:34:18 [main] INFO  c.e.a.controller.ClientController - Fetching client with documentType=C and documentNumber=23445322
+2024-12-11 09:34:18 [main] INFO  c.e.a.controller.ClientController - Fetching client with documentType=C and documentNumber=123456789
+2024-12-11 09:34:18 [main] ERROR c.e.a.e.GlobalExceptionHandler - Handling ClientNotFoundException: Client not found
+2024-12-11 09:34:18 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Client not found - Client not found
+2024-12-11 09:34:18 [main] INFO  c.e.a.controller.ClientController - Fetching client with documentType=INVALID and documentNumber=123456789
+2024-12-11 09:34:18 [main] WARN  c.e.a.e.GlobalExceptionHandler - Handling InvalidDocumentTypeException: Invalid document type
+2024-12-11 09:34:18 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Invalid document type - Invalid document type
+2024-12-11 09:34:18 [main] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: C and documentNumber: 99999999
+2024-12-11 09:34:18 [main] INFO  c.e.apiClient.service.ClientService - Document type 'C' is valid.
+2024-12-11 09:34:18 [main] ERROR c.e.apiClient.service.ClientService - Client not found with documentType: C and documentNumber: 99999999
+2024-12-11 09:34:18 [main] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: C and documentNumber: 23445322
+2024-12-11 09:34:18 [main] INFO  c.e.apiClient.service.ClientService - Document type 'C' is valid.
+2024-12-11 09:34:18 [main] INFO  c.e.apiClient.service.ClientService - Client found: Juan Perez with documentNumber: 23445322
+2024-12-11 09:34:18 [main] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: X and documentNumber: 23445322
+2024-12-11 09:34:18 [main] WARN  c.e.apiClient.service.ClientService - Invalid document type received: X
+2024-12-11 09:34:18 [main] ERROR c.e.a.e.GlobalExceptionHandler - Unexpected error occurred: Unexpected error
+java.lang.RuntimeException: Unexpected error
+	at com.example.apiClient.GlobalExceptionHandlerTest.testHandleGeneralException(GlobalExceptionHandlerTest.java:56)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2024-12-11 09:34:18 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Internal server error - An unexpected error occurred. Please try again later.
+2024-12-11 09:34:18 [main] ERROR c.e.a.e.GlobalExceptionHandler - Handling S3Exception: S3 bucket error
+2024-12-11 09:34:18 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: S3 Error - S3 bucket error
+2024-12-11 09:34:18 [main] WARN  c.e.a.e.GlobalExceptionHandler - Handling InvalidDocumentTypeException: Invalid document type
+2024-12-11 09:34:18 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Invalid document type - Invalid document type
+2024-12-11 09:34:18 [main] ERROR c.e.a.e.GlobalExceptionHandler - Handling ClientNotFoundException: Client not found
+2024-12-11 09:34:18 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Client not found - Client not found
+2024-12-11 09:53:05 [main] INFO  c.e.a.ApiClientApplicationTests - Starting ApiClientApplicationTests using Java 21.0.5 with PID 1316 (started by pc in C:\Users\pc\Desktop\Prueba NTT\apiClient)
+2024-12-11 09:53:05 [main] INFO  c.e.a.ApiClientApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-11 09:53:07 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2024-12-11 09:53:07 [main] INFO  c.e.a.ApiClientApplicationTests - Started ApiClientApplicationTests in 2.412 seconds (process running for 3.359)
+2024-12-11 09:53:08 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.apiClient.ClientControllerTest]: ClientControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-11 09:53:08 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.apiClient.ApiClientApplication for test class com.example.apiClient.ClientControllerTest
+2024-12-11 09:53:08 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-12-11 09:53:08 [main] INFO  c.e.apiClient.ClientControllerTest - Starting ClientControllerTest using Java 21.0.5 with PID 1316 (started by pc in C:\Users\pc\Desktop\Prueba NTT\apiClient)
+2024-12-11 09:53:08 [main] INFO  c.e.apiClient.ClientControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-12-11 09:53:09 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-12-11 09:53:09 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-12-11 09:53:09 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-12-11 09:53:09 [main] INFO  c.e.apiClient.ClientControllerTest - Started ClientControllerTest in 0.483 seconds (process running for 4.593)
+2024-12-11 09:53:09 [main] INFO  c.e.a.controller.ClientController - Fetching client with documentType=C and documentNumber=23445322
+2024-12-11 09:53:09 [main] INFO  c.e.a.controller.ClientController - Fetching client with documentType=C and documentNumber=123456789
+2024-12-11 09:53:09 [main] ERROR c.e.a.e.GlobalExceptionHandler - Handling ClientNotFoundException: Client not found
+2024-12-11 09:53:09 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Client not found - Client not found
+2024-12-11 09:53:09 [main] INFO  c.e.a.controller.ClientController - Fetching client with documentType=INVALID and documentNumber=123456789
+2024-12-11 09:53:09 [main] WARN  c.e.a.e.GlobalExceptionHandler - Handling InvalidDocumentTypeException: Invalid document type
+2024-12-11 09:53:09 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Invalid document type - Invalid document type
+2024-12-11 09:53:09 [main] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: C and documentNumber: 99999999
+2024-12-11 09:53:09 [main] INFO  c.e.apiClient.service.ClientService - Document type 'C' is valid.
+2024-12-11 09:53:09 [main] ERROR c.e.apiClient.service.ClientService - Client not found with documentType: C and documentNumber: 99999999
+2024-12-11 09:53:09 [main] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: C and documentNumber: 23445322
+2024-12-11 09:53:09 [main] INFO  c.e.apiClient.service.ClientService - Document type 'C' is valid.
+2024-12-11 09:53:09 [main] INFO  c.e.apiClient.service.ClientService - Client found: Juan Perez with documentNumber: 23445322
+2024-12-11 09:53:09 [main] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: X and documentNumber: 23445322
+2024-12-11 09:53:09 [main] WARN  c.e.apiClient.service.ClientService - Invalid document type received: X
+2024-12-11 09:53:09 [main] ERROR c.e.a.e.GlobalExceptionHandler - Unexpected error occurred: Unexpected error
+java.lang.RuntimeException: Unexpected error
+	at com.example.apiClient.GlobalExceptionHandlerTest.testHandleGeneralException(GlobalExceptionHandlerTest.java:56)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2024-12-11 09:53:09 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Internal server error - An unexpected error occurred. Please try again later.
+2024-12-11 09:53:09 [main] ERROR c.e.a.e.GlobalExceptionHandler - Handling S3Exception: S3 bucket error
+2024-12-11 09:53:09 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: S3 Error - S3 bucket error
+2024-12-11 09:53:09 [main] WARN  c.e.a.e.GlobalExceptionHandler - Handling InvalidDocumentTypeException: Invalid document type
+2024-12-11 09:53:09 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Invalid document type - Invalid document type
+2024-12-11 09:53:09 [main] ERROR c.e.a.e.GlobalExceptionHandler - Handling ClientNotFoundException: Client not found
+2024-12-11 09:53:09 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Client not found - Client not found
+2024-12-11 10:00:42 [main] INFO  c.e.a.ApiClientApplicationTests - Starting ApiClientApplicationTests using Java 21.0.5 with PID 13704 (started by pc in C:\Users\pc\Desktop\Prueba NTT\apiClient)
+2024-12-11 10:00:42 [main] INFO  c.e.a.ApiClientApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-11 10:00:44 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2024-12-11 10:00:44 [main] INFO  c.e.a.ApiClientApplicationTests - Started ApiClientApplicationTests in 2.53 seconds (process running for 3.511)
+2024-12-11 10:00:45 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.apiClient.ClientControllerTest]: ClientControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-11 10:00:45 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.apiClient.ApiClientApplication for test class com.example.apiClient.ClientControllerTest
+2024-12-11 10:00:45 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-12-11 10:00:45 [main] INFO  c.e.apiClient.ClientControllerTest - Starting ClientControllerTest using Java 21.0.5 with PID 13704 (started by pc in C:\Users\pc\Desktop\Prueba NTT\apiClient)
+2024-12-11 10:00:45 [main] INFO  c.e.apiClient.ClientControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-12-11 10:00:45 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-12-11 10:00:45 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-12-11 10:00:45 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-12-11 10:00:45 [main] INFO  c.e.apiClient.ClientControllerTest - Started ClientControllerTest in 0.491 seconds (process running for 4.742)
+2024-12-11 10:00:45 [main] INFO  c.e.a.controller.ClientController - Fetching client with documentType=C and documentNumber=23445322
+2024-12-11 10:00:46 [main] INFO  c.e.a.controller.ClientController - Fetching client with documentType=C and documentNumber=123456789
+2024-12-11 10:00:46 [main] ERROR c.e.a.e.GlobalExceptionHandler - Handling ClientNotFoundException: Client not found
+2024-12-11 10:00:46 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Client not found - Client not found
+2024-12-11 10:00:46 [main] INFO  c.e.a.controller.ClientController - Fetching client with documentType=INVALID and documentNumber=123456789
+2024-12-11 10:00:46 [main] WARN  c.e.a.e.GlobalExceptionHandler - Handling InvalidDocumentTypeException: Invalid document type
+2024-12-11 10:00:46 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Invalid document type - Invalid document type
+2024-12-11 10:00:46 [main] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: C and documentNumber: 99999999
+2024-12-11 10:00:46 [main] INFO  c.e.apiClient.service.ClientService - Document type 'C' is valid.
+2024-12-11 10:00:46 [main] ERROR c.e.apiClient.service.ClientService - Client not found with documentType: C and documentNumber: 99999999
+2024-12-11 10:00:46 [main] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: C and documentNumber: 23445322
+2024-12-11 10:00:46 [main] INFO  c.e.apiClient.service.ClientService - Document type 'C' is valid.
+2024-12-11 10:00:46 [main] INFO  c.e.apiClient.service.ClientService - Client found: Juan Perez with documentNumber: 23445322
+2024-12-11 10:00:46 [main] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: X and documentNumber: 23445322
+2024-12-11 10:00:46 [main] WARN  c.e.apiClient.service.ClientService - Invalid document type received: X
+2024-12-11 10:00:46 [main] ERROR c.e.a.e.GlobalExceptionHandler - Unexpected error occurred: Unexpected error
+java.lang.RuntimeException: Unexpected error
+	at com.example.apiClient.GlobalExceptionHandlerTest.testHandleGeneralException(GlobalExceptionHandlerTest.java:56)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2024-12-11 10:00:46 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Internal server error - An unexpected error occurred. Please try again later.
+2024-12-11 10:00:46 [main] ERROR c.e.a.e.GlobalExceptionHandler - Handling S3Exception: S3 bucket error
+2024-12-11 10:00:46 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: S3 Error - S3 bucket error
+2024-12-11 10:00:46 [main] WARN  c.e.a.e.GlobalExceptionHandler - Handling InvalidDocumentTypeException: Invalid document type
+2024-12-11 10:00:46 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Invalid document type - Invalid document type
+2024-12-11 10:00:46 [main] ERROR c.e.a.e.GlobalExceptionHandler - Handling ClientNotFoundException: Client not found
+2024-12-11 10:00:46 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Client not found - Client not found
+2024-12-11 10:22:16 [main] INFO  c.e.a.ApiClientApplicationTests - Starting ApiClientApplicationTests using Java 21.0.5 with PID 16668 (started by pc in C:\Users\pc\Desktop\Prueba NTT\apiClient)
+2024-12-11 10:22:16 [main] INFO  c.e.a.ApiClientApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-11 10:22:19 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2024-12-11 10:22:19 [main] INFO  c.e.a.ApiClientApplicationTests - Started ApiClientApplicationTests in 3.159 seconds (process running for 4.244)
+2024-12-11 10:22:20 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.apiClient.ClientControllerTest]: ClientControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-11 10:22:20 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.apiClient.ApiClientApplication for test class com.example.apiClient.ClientControllerTest
+2024-12-11 10:22:20 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-12-11 10:22:20 [main] INFO  c.e.apiClient.ClientControllerTest - Starting ClientControllerTest using Java 21.0.5 with PID 16668 (started by pc in C:\Users\pc\Desktop\Prueba NTT\apiClient)
+2024-12-11 10:22:20 [main] INFO  c.e.apiClient.ClientControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-12-11 10:22:20 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-12-11 10:22:20 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-12-11 10:22:20 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-12-11 10:22:20 [main] INFO  c.e.apiClient.ClientControllerTest - Started ClientControllerTest in 0.488 seconds (process running for 5.453)
+2024-12-11 10:22:20 [main] INFO  c.e.a.controller.ClientController - Fetching client with documentType=C and documentNumber=23445322
+2024-12-11 10:22:21 [main] INFO  c.e.a.controller.ClientController - Fetching client with documentType=C and documentNumber=123456789
+2024-12-11 10:22:21 [main] ERROR c.e.a.e.GlobalExceptionHandler - Handling ClientNotFoundException: Client not found
+2024-12-11 10:22:21 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Client not found - Client not found
+2024-12-11 10:22:21 [main] INFO  c.e.a.controller.ClientController - Fetching client with documentType=INVALID and documentNumber=123456789
+2024-12-11 10:22:21 [main] WARN  c.e.a.e.GlobalExceptionHandler - Handling InvalidDocumentTypeException: Invalid document type
+2024-12-11 10:22:21 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Invalid document type - Invalid document type
+2024-12-11 10:22:21 [main] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: C and documentNumber: 99999999
+2024-12-11 10:22:21 [main] INFO  c.e.apiClient.service.ClientService - Document type 'C' is valid.
+2024-12-11 10:22:21 [main] ERROR c.e.apiClient.service.ClientService - Client not found with documentType: C and documentNumber: 99999999
+2024-12-11 10:22:21 [main] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: C and documentNumber: 23445322
+2024-12-11 10:22:21 [main] INFO  c.e.apiClient.service.ClientService - Document type 'C' is valid.
+2024-12-11 10:22:21 [main] INFO  c.e.apiClient.service.ClientService - Client found: Juan Perez with documentNumber: 23445322
+2024-12-11 10:22:21 [main] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: X and documentNumber: 23445322
+2024-12-11 10:22:21 [main] WARN  c.e.apiClient.service.ClientService - Invalid document type received: X
+2024-12-11 10:22:21 [main] ERROR c.e.a.e.GlobalExceptionHandler - Unexpected error occurred: Unexpected error
+java.lang.RuntimeException: Unexpected error
+	at com.example.apiClient.GlobalExceptionHandlerTest.testHandleGeneralException(GlobalExceptionHandlerTest.java:56)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2024-12-11 10:22:21 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Internal server error - An unexpected error occurred. Please try again later.
+2024-12-11 10:22:21 [main] ERROR c.e.a.e.GlobalExceptionHandler - Handling S3Exception: S3 bucket error
+2024-12-11 10:22:21 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: S3 Error - S3 bucket error
+2024-12-11 10:22:21 [main] WARN  c.e.a.e.GlobalExceptionHandler - Handling InvalidDocumentTypeException: Invalid document type
+2024-12-11 10:22:21 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Invalid document type - Invalid document type
+2024-12-11 10:22:21 [main] ERROR c.e.a.e.GlobalExceptionHandler - Handling ClientNotFoundException: Client not found
+2024-12-11 10:22:21 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Client not found - Client not found
+2024-12-11 11:32:11 [main] INFO  c.e.a.ApiClientApplicationTests - Starting ApiClientApplicationTests using Java 21.0.5 with PID 21356 (started by pc in C:\Users\pc\Desktop\Prueba NTT\apiClient)
+2024-12-11 11:32:11 [main] INFO  c.e.a.ApiClientApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-11 11:32:13 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2024-12-11 11:32:13 [main] INFO  c.e.a.ApiClientApplicationTests - Started ApiClientApplicationTests in 2.471 seconds (process running for 3.43)
+2024-12-11 11:32:14 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.apiClient.ClientControllerTest]: ClientControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-11 11:32:14 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.apiClient.ApiClientApplication for test class com.example.apiClient.ClientControllerTest
+2024-12-11 11:32:14 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-12-11 11:32:14 [main] INFO  c.e.apiClient.ClientControllerTest - Starting ClientControllerTest using Java 21.0.5 with PID 21356 (started by pc in C:\Users\pc\Desktop\Prueba NTT\apiClient)
+2024-12-11 11:32:14 [main] INFO  c.e.apiClient.ClientControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-12-11 11:32:15 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-12-11 11:32:15 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-12-11 11:32:15 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-12-11 11:32:15 [main] INFO  c.e.apiClient.ClientControllerTest - Started ClientControllerTest in 0.492 seconds (process running for 4.732)
+2024-12-11 11:32:15 [main] INFO  c.e.a.controller.ClientController - Fetching client with documentType=C and documentNumber=23445322
+2024-12-11 11:32:15 [main] INFO  c.e.a.controller.ClientController - Fetching client with documentType=C and documentNumber=123456789
+2024-12-11 11:32:15 [main] ERROR c.e.a.e.GlobalExceptionHandler - Handling ClientNotFoundException: Client not found
+2024-12-11 11:32:15 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Client not found - Client not found
+2024-12-11 11:32:15 [main] INFO  c.e.a.controller.ClientController - Fetching client with documentType=INVALID and documentNumber=123456789
+2024-12-11 11:32:15 [main] WARN  c.e.a.e.GlobalExceptionHandler - Handling InvalidDocumentTypeException: Invalid document type
+2024-12-11 11:32:15 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Invalid document type - Invalid document type
+2024-12-11 11:32:15 [main] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: C and documentNumber: 99999999
+2024-12-11 11:32:15 [main] INFO  c.e.apiClient.service.ClientService - Document type 'C' is valid.
+2024-12-11 11:32:15 [main] ERROR c.e.apiClient.service.ClientService - Client not found with documentType: C and documentNumber: 99999999
+2024-12-11 11:32:15 [main] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: C and documentNumber: 23445322
+2024-12-11 11:32:15 [main] INFO  c.e.apiClient.service.ClientService - Document type 'C' is valid.
+2024-12-11 11:32:15 [main] INFO  c.e.apiClient.service.ClientService - Client found: Juan Perez with documentNumber: 23445322
+2024-12-11 11:32:15 [main] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: X and documentNumber: 23445322
+2024-12-11 11:32:15 [main] WARN  c.e.apiClient.service.ClientService - Invalid document type received: X
+2024-12-11 11:32:15 [main] ERROR c.e.a.e.GlobalExceptionHandler - Unexpected error occurred: Unexpected error
+java.lang.RuntimeException: Unexpected error
+	at com.example.apiClient.GlobalExceptionHandlerTest.testHandleGeneralException(GlobalExceptionHandlerTest.java:56)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2024-12-11 11:32:15 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Internal server error - An unexpected error occurred. Please try again later.
+2024-12-11 11:32:15 [main] ERROR c.e.a.e.GlobalExceptionHandler - Handling S3Exception: S3 bucket error
+2024-12-11 11:32:15 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: S3 Error - S3 bucket error
+2024-12-11 11:32:15 [main] WARN  c.e.a.e.GlobalExceptionHandler - Handling InvalidDocumentTypeException: Invalid document type
+2024-12-11 11:32:15 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Invalid document type - Invalid document type
+2024-12-11 11:32:15 [main] ERROR c.e.a.e.GlobalExceptionHandler - Handling ClientNotFoundException: Client not found
+2024-12-11 11:32:15 [main] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Client not found - Client not found
+2024-12-11 13:39:43 [restartedMain] INFO  c.e.apiClient.ApiClientApplication - Starting ApiClientApplication using Java 21.0.5 with PID 21676 (C:\Users\pc\Desktop\Prueba NTT\apiClient\target\classes started by pc in C:\Users\pc\Desktop\Prueba NTT\apiClient)
+2024-12-11 13:39:43 [restartedMain] INFO  c.e.apiClient.ApiClientApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-11 13:39:43 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-11 13:39:43 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-11 13:39:45 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2024-12-11 13:39:45 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+2024-12-11 13:39:45 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-11 13:39:45 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-11 13:39:45 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-11 13:39:45 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1715 ms
+2024-12-11 13:39:46 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-12-11 13:39:46 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2024-12-11 13:39:46 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+2024-12-11 13:39:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2024-12-11 13:39:46 [restartedMain] INFO  c.e.apiClient.ApiClientApplication - Started ApiClientApplication in 3.678 seconds (process running for 4.193)
+2024-12-11 13:39:50 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-11 13:39:50 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-11 13:39:50 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-12-11 13:39:50 [http-nio-8090-exec-1] INFO  c.e.a.controller.ClientController - Fetching client with documentType=C and documentNumber=23445322
+2024-12-11 13:39:50 [http-nio-8090-exec-1] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: C and documentNumber: 23445322
+2024-12-11 13:39:50 [http-nio-8090-exec-1] INFO  c.e.apiClient.service.ClientService - Document type 'C' is valid.
+2024-12-11 13:39:50 [http-nio-8090-exec-1] INFO  c.e.apiClient.service.ClientService - Client found: Juan Perez with documentNumber: 23445322
+2024-12-11 13:44:26 [http-nio-8090-exec-3] INFO  c.e.a.controller.ClientController - Fetching client with documentType=C and documentNumber=23445322
+2024-12-11 13:44:26 [http-nio-8090-exec-3] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: C and documentNumber: 23445322
+2024-12-11 13:44:26 [http-nio-8090-exec-3] INFO  c.e.apiClient.service.ClientService - Document type 'C' is valid.
+2024-12-11 13:44:26 [http-nio-8090-exec-3] INFO  c.e.apiClient.service.ClientService - Client found: Juan Perez with documentNumber: 23445322
+2024-12-11 13:51:22 [http-nio-8090-exec-4] INFO  c.e.a.controller.ClientController - Fetching client with documentType=C and documentNumber=111111111
+2024-12-11 13:51:22 [http-nio-8090-exec-4] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: C and documentNumber: 111111111
+2024-12-11 13:51:22 [http-nio-8090-exec-4] INFO  c.e.apiClient.service.ClientService - Document type 'C' is valid.
+2024-12-11 13:51:22 [http-nio-8090-exec-4] ERROR c.e.apiClient.service.ClientService - Client not found with documentType: C and documentNumber: 111111111
+2024-12-11 13:51:22 [http-nio-8090-exec-4] ERROR c.e.a.e.GlobalExceptionHandler - Handling ClientNotFoundException: Client not found with document C 111111111
+2024-12-11 13:51:22 [http-nio-8090-exec-4] INFO  c.e.a.e.GlobalExceptionHandler - Building error response: Client not found - Client not found with document C 111111111
+2024-12-11 13:51:22 [http-nio-8090-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.example.apiClient.exception.ClientNotFoundException: Client not found with document C 111111111]
+2024-12-11 13:54:14 [http-nio-8090-exec-7] INFO  c.e.a.controller.ClientController - Fetching client with documentType=C and documentNumber=23445322
+2024-12-11 13:54:14 [http-nio-8090-exec-7] INFO  c.e.apiClient.service.ClientService - Request received to get client with documentType: C and documentNumber: 23445322
+2024-12-11 13:54:14 [http-nio-8090-exec-7] INFO  c.e.apiClient.service.ClientService - Document type 'C' is valid.
+2024-12-11 13:54:14 [http-nio-8090-exec-7] INFO  c.e.apiClient.service.ClientService - Client found: Juan Perez with documentNumber: 23445322
+2024-12-11 13:58:53 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-11 13:58:53 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
