@@ -27,6 +27,8 @@ Este es un proyecto de API RESTful desarrollado con **Spring Boot** que permite 
 
 - **Java 17** o superior.
 - **Maven 3.8+**.
+- **Cuenta de AWS**:
+    - Necesaria para acceder al archivo alojado en el bucket de Amazon S3.
 
 ## Instalación y Configuración
 
